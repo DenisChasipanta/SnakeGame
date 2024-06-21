@@ -11,6 +11,7 @@ import { CommonActions, useNavigation } from '@react-navigation/native';
 interface FormRegister {
     email: string;
     password: string;
+    phoneNumber: string;
 }
 
 //Interface - mensajes
@@ -24,7 +25,8 @@ export const RegisterScreen = () => {
     //hook useState: manipulación del formulario
     const [formRegister, setFormRegister] = useState<FormRegister>({
         email: "",
-        password: ""
+        password: "",
+        phoneNumber: "",
     });
 
     //hook useState: visualizar u ocultar mensaje 
@@ -48,7 +50,7 @@ export const RegisterScreen = () => {
 
     //Función que permita crear y enviar el nuevo usuario
     const handlerRegister = async () => {
-        if (!formRegister.email || !formRegister.password) {
+        if (!formRegister.email || !formRegister.password || !formRegister.phoneNumber) {
             setShowMessage({
                 visible: true,
                 message: 'Completa todos los campos!',
@@ -96,6 +98,12 @@ export const RegisterScreen = () => {
                     onPress={() => setHiddenPassword(!hiddenPassword)} />}
                 style={styles.inputs}
                 onChangeText={(value) => handlerSetValues('password', value)} />
+            <TextInput
+                mode='outlined'
+                label='Número de teléfono'
+                placeholder='Escriba su número de teléfono'
+                style={styles.inputs}
+                onChangeText={(value) => handlerSetValues('phoneNumber', value)} />
             <Button style={styles.button} mode="contained" onPress={handlerRegister}>
                 Registrar
             </Button>

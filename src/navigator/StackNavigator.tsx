@@ -1,14 +1,15 @@
-import { createStackNavigator } from '@react-navigation/stack';
-import { LoginScreen } from '../screens/LoginScreen';
-import { RegisterScreen } from '../screens/RegisterScreen';
-import { HomeScreen } from '../screens/HomeScreen/HomeScreen';
-import { useEffect, useState } from 'react';
-import { onAuthStateChanged } from 'firebase/auth';
-import { auth } from '../configs/firebaseConfig';
-import { View } from 'react-native';
-import { ActivityIndicator } from 'react-native-paper';
-import { styles } from '../theme/styles';
-import { DetailMessageScreen } from '../screens/HomeScreen/DetailMessageScreen';
+import { createStackNavigator } from "@react-navigation/stack";
+import { onAuthStateChanged } from "firebase/auth";
+import { useState, useEffect } from "react";
+import { View, ActivityIndicator } from "react-native";
+import { styles } from "../theme/styles";
+import { LoginScreen } from "../screens/LoginScreen";
+import { RegisterScreen } from "../screens/RegisterScreen";
+import { HomeScreen } from "../screens/HomeScreen/HomeScreen";
+import { auth } from "../configs/firebaseConfig";
+
+
+
 
 const Stack = createStackNavigator();
 
@@ -24,7 +25,8 @@ const routes: Routes[] = [
     { name: "Login", screen: LoginScreen },
     { name: "Register", screen: RegisterScreen },
     { name: "Home", screen: HomeScreen },
-    { name: "Detail", screen: DetailMessageScreen, headerShow: true }
+    // { name: "Game", screen: Game, headerShow:true }
+    
 ]
 
 export const StackNavigator = () => {

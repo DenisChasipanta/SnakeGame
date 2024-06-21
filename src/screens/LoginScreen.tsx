@@ -76,7 +76,7 @@ export const LoginScreen = () => {
 
     return (
         <View style={styles.root}>
-            <Text style={styles.textHead}>Inicia Sesión</Text>
+            <Text style={styles.textHead}>SNAKE GAME</Text>
             <TextInput
                 mode='outlined'
                 label='Correo'

@@ -5,29 +5,32 @@ export const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        gap: 10
-
+        gap: 10,
+        backgroundColor: 'green',
     },
     inputs: {
         width: '90%'
     },
     textHead: {
-        fontSize: 25,
-        fontWeight: 'bold'
+        fontSize: 50,
+        fontWeight: 'bold',
+        color: 'black'
     },
     button: {
         width: '90%',
+        backgroundColor: '#BAFF02'
     },
     textRedirect: {
         marginTop: 20,
         fontSize: 17,
         fontWeight: 'bold',
-        color: '#5322af'
+        color: '#FF2E02'
     },
     rootHome: {
-        flex: 1,
-        marginVertical: 50,
-        marginHorizontal: 25
+        flex: 5,
+        marginVertical: 10,
+        marginHorizontal: 10,
+        backgroundColor: 'black'
     },
     header: {
         flexDirection: "row",
